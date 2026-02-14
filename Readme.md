@@ -246,11 +246,21 @@ npm run build
 ---
 ## Future Enhancements
 
-* Authentication and roles
-* Different Admin and User access
-* Updated by flag for transperancy
-* Organization or Team based isolated systems for better
-* Overall performance Dashboards
+- **Authentication and Role-Based Access Control (RBAC)**  
+  Introduce authentication with clearly defined roles (Admin, User) to control access to incident creation, updates, and resolution actions.
+
+- **Admin and User Permission Separation**  
+  Restrict sensitive operations such as status transitions and incident deletion to Admin users while allowing read-only or limited update access for regular users.
+
+- **Update Attribution for Transparency**  
+  Add an `updated_by` field to track who modified an incident and when, improving auditability and accountability.
+
+- **Organization / Team-Based Isolation**  
+  Support multi-tenant architecture where incidents are isolated by organization or team, enabling safer usage across multiple groups.
+
+- **Performance and Operational Dashboards**  
+  Add dashboards to visualize incident trends, resolution times, severity distribution, and service-level performance metrics.
+
 ---
 
 ## Author
@@ -258,4 +268,3 @@ npm run build
 Vivek Dubey
 Software Engineer
 
-```
