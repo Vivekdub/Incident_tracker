@@ -1,0 +1,315 @@
+/* Incident Tracker – layout and shared styles to match reference image */
+
+#root {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 32px;
+  text-align: left;
+  min-height: 100vh;
+}
+
+/* Page container – white card on light gray background */
+.incident-page {
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  padding: 24px 28px;
+}
+
+/* Header bar – consistent across list, detail, create */
+.incident-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.incident-header h1 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.incident-header--spaced {
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+}
+
+/* Filters – less compact, severity spread out */
+.filters-section {
+  margin-bottom: 24px;
+}
+
+.filters-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+
+.filters-row--first {
+  margin-bottom: 16px;
+}
+
+.filters-row--second {
+  gap: 20px;
+}
+
+.filters-service {
+  min-width: 120px;
+  max-width: 140px;
+}
+
+.filters-severity {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex: 1;
+  min-width: 280px;
+}
+
+.filters-severity-label {
+  font-size: 0.875rem;
+  color: #6b7280;
+  flex-shrink: 0;
+}
+
+.filters-severity-options {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.filters-severity-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+
+.filters-status {
+  min-width: 110px;
+  max-width: 130px;
+}
+
+.filters-search {
+  width: 180px;
+}
+
+/* Primary button – dark gray (New Incident, Filter, Save Changes, Create Incident) */
+.btn-primary {
+  background: #374151;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #1f2937;
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Secondary button – light gray (Cancel) */
+.btn-secondary {
+  background: #fff;
+  color: #374151;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background: #f9fafb;
+}
+
+/* Form controls – match image */
+.incident-input,
+.incident-select,
+.incident-textarea {
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 0.875rem;
+  background: #fff;
+  width: 100%;
+}
+
+.incident-input:focus,
+.incident-select:focus,
+.incident-textarea:focus {
+  outline: none;
+  border-color: #6b7280;
+  box-shadow: 0 0 0 2px rgba(107, 114, 128, 0.2);
+}
+
+.incident-textarea {
+  resize: vertical;
+  min-height: 88px;
+}
+
+/* Labels */
+.incident-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #4b5563;
+  margin-bottom: 6px;
+}
+
+/* Table – clean borders like image */
+.incident-table-wrap {
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.incident-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.incident-table thead {
+  background: #f3f4f6;
+}
+
+.incident-table th {
+  text-align: left;
+  padding: 10px 14px;
+  font-weight: 600;
+  color: #374151;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.incident-table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.incident-table tbody tr:hover {
+  background: #f9fafb;
+}
+
+.incident-table th button {
+  background: none;
+  border: none;
+  font-weight: 600;
+  color: #374151;
+  cursor: pointer;
+  padding: 0;
+}
+
+.incident-table th button:hover {
+  color: #111827;
+}
+
+/* Pagination – match “Page 1 of 10” with << < 1 2 3 10 Next >> */
+.incident-pagination {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 20px;
+  font-size: 0.875rem;
+}
+
+.incident-pagination button {
+  min-width: 32px;
+  padding: 6px 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  background: #fff;
+  color: #374151;
+  cursor: pointer;
+}
+
+.incident-pagination button:hover:not(:disabled) {
+  background: #f9fafb;
+}
+
+.incident-pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.incident-pagination button.active {
+  background: #374151;
+  color: #fff;
+  border-color: #374151;
+}
+
+.incident-pagination .page-info {
+  margin-left: 12px;
+  color: #6b7280;
+}
+
+/* Detail/Create panel – light gray background block */
+.incident-detail-panel {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 20px 24px;
+}
+
+/* Back link */
+.incident-back-link {
+  color: #2563eb;
+  font-size: 0.875rem;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+.incident-back-link:hover {
+  text-decoration: underline;
+}
+
+/* Title link in table */
+.incident-title-link {
+  color: #2563eb;
+  font-weight: 500;
+}
+
+.incident-title-link:hover {
+  text-decoration: underline;
+}
+
+/* Status badges – three colors */
+.status-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+
+.status-badge--open {
+  background: #fef2f2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+}
+
+.status-badge--mitigated {
+  background: #fffbeb;
+  color: #b45309;
+  border: 1px solid #fde68a;
+}
+
+.status-badge--resolved {
+  background: #f0fdf4;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+}
