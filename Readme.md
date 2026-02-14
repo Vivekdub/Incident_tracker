@@ -1,6 +1,5 @@
 # Incident Management Dashboard
 
-A full-stack Incident Management Dashboard built as part of a Software Engineer assignment.  
 The system allows teams to create, view, track, and update incidents across multiple services with clear severity and lifecycle states.
 
 The project focuses on clean API design, predictable frontend behavior, and practical engineering decisions.
